@@ -1,0 +1,62 @@
+utils.loadPlatform("ti.platforms.ezdsp5505");
+
+/* The following DSP/BIOS Features are enabled.  */
+bios.enableRealTimeAnalysis(prog);
+bios.enableTskManager(prog);
+
+bios.MEM.NOMEMORYHEAPS = 0;
+bios.MEM.instance("SARAM").createHeap = 1;
+bios.MEM.BIOSOBJSEG = prog.get("SARAM");
+bios.MEM.MALLOCSEG = prog.get("SARAM");
+bios.MEM.ARGSSEG = prog.get("SARAM");
+bios.MEM.STACKSEG = prog.get("SARAM");
+bios.MEM.GBLINITSEG = prog.get("SARAM");
+bios.MEM.TRCDATASEG = prog.get("SARAM");
+bios.MEM.SYSDATASEG = prog.get("SARAM");
+bios.MEM.OBJSEG = prog.get("SARAM");
+bios.MEM.BIOSSEG = prog.get("SARAM");
+bios.MEM.SYSINITSEG = prog.get("SARAM");
+bios.MEM.HWISEG = prog.get("SARAM");
+bios.MEM.RTDXTEXTSEG = prog.get("SARAM");
+bios.MEM.TEXTSEG = prog.get("SARAM");
+bios.UDEV.create("AIC3204");
+bios.UDEV.instance("AIC3204").fxnTable = prog.extern("AIC3204_FXNS");
+bios.UDEV.instance("AIC3204").fxnTableType = "IOM_Fxns";
+bios.UDEV.instance("AIC3204").params = prog.extern("AIC3204_DEVPARAMS");
+bios.DIO.create("audioDAC");
+bios.GBL.CALLUSERINITFXN = 1;
+bios.GBL.USERINITFXN = prog.extern("sysInit");
+bios.HWI.instance("HWI_INT8").fxn = prog.extern("isr_DMA");
+bios.HWI.instance("HWI_INT8").useDispatcher = 1;
+bios.TSK.create("decode");
+bios.TSK.instance("decode").order = 1;
+bios.TSK.instance("decode").fxn = prog.extern("tskDecode");
+bios.TSK.instance("decode").priority = 5;
+bios.TSK.create("read_samples");
+bios.TSK.instance("read_samples").order = 2;
+bios.TSK.instance("read_samples").priority = 5;
+bios.TSK.instance("read_samples").fxn = prog.extern("read_aic3204");
+bios.TSK.instance("TSK_idle").order = 3;
+bios.TSK.create("menu_control");
+bios.TSK.instance("menu_control").order = 4;
+bios.TSK.instance("menu_control").priority = 5;
+bios.TSK.instance("menu_control").stackMemSeg = prog.get("SARAM");
+bios.TSK.instance("menu_control").fxn = prog.extern("menu_ctrl");
+bios.MEM.instance("SARAM").base = 0x010000;
+bios.MEM.instance("SARAM").len = 0x40000;
+bios.MEM.create("DARAM2");
+bios.MEM.instance("DARAM2").base = 0x008000;
+bios.MEM.instance("DARAM2").len = 0x8000;
+bios.MEM.instance("DARAM2").createHeap = 0;
+bios.TSK.instance("TSK_idle").order = 1;
+bios.TSK.instance("decode").order = 2;
+bios.TSK.instance("read_samples").order = 3;
+bios.TSK.create("led_blinking");
+bios.TSK.instance("led_blinking").order = 6;
+bios.TSK.instance("led_blinking").fxn = prog.extern("led_blink");
+bios.TSK.instance("led_blinking").priority = 5;
+bios.MEM.instance("DARAM2").space = "data";
+bios.MEM.instance("DARAM2").space = "code/data";
+// !GRAPHICAL_CONFIG_TOOL_SCRIPT_INSERT_POINT!
+
+prog.gen();

@@ -1,0 +1,658 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<configurations>
+
+  <configuration id="Texas Instruments XDS100v1 USB Emulator_0">
+    <connection class="185076" desc="Texas Instruments XDS100v1 USB Emulator_0" id="Texas Instruments XDS100v1 USB Emulator_0" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\connections\TIXDS100usb_Connection.xml">
+      <connectionType Type="TIXDS100" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\connections\TIXDS100usb_Connection.xml"/>
+      <property ID="SEPK.POD_DRVR" Name="Emulator Filename" Type="hiddenfield" Value="jioserdesusb.dll" id="Emulator Filename" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\connections\TIXDS100usb_Connection.xml"/>
+      <property ID="SEPK.POD_PORT" Name="Emulator Selection" Type="choicelist" Value="0" id="Emulator Selection" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\connections\TIXDS100usb_Connection.xml">
+        <choice Name="Only one XDS100 installed" value="0"/>
+        <choice Name="Select by serial number" value="0">
+          <property ID="SEPK.POD_SERIAL" Name="-- Enter the serial number" Type="stringfield" Value="Run xds100serial.exe to get serial number" id="-- Enter the serial number"/>
+        </choice>
+      </property>
+      <property ID="PRODUCT.TITLE" Name="Title" Type="hiddenfield" Value="Texas Instruments XDS100 USB" id="Title" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\connections\TIXDS100usb_Connection.xml"/>
+      <property ID="PRODUCT.ALIAS" Name="Alias" Type="hiddenfield" Value="TI_XDS100v1_USB" id="Alias" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\connections\TIXDS100usb_Connection.xml"/>
+      <property ID="PRODUCT.NAME" Name="Name" Type="hiddenfield" Value="FTDI_FT2232" id="Name" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\connections\TIXDS100usb_Connection.xml"/>
+      <property ID="FTDI_FT2232.USB_VID" Name="USB VID" Type="hiddenfield" Value="0x0403" id="USB VID" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\connections\TIXDS100usb_Connection.xml"/>
+      <property ID="FTDI_FT2232.USB_PID" Name="USB PID" Type="hiddenfield" Value="0xa6d0" id="USB PID" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\connections\TIXDS100usb_Connection.xml"/>
+      <property ID="FTDI_FT2232.GPIO_L0" Name="TRST" Type="hiddenfield" Value="TRSTn,Active_Low" id="TRST" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\connections\TIXDS100usb_Connection.xml"/>
+      <property ID="FTDI_FT2232.GPIO_L1" Name="EMU Pin Enable" Type="hiddenfield" Value="EMU_Pin_Enable,Active_Low" id="EMU Pin Enable" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\connections\TIXDS100usb_Connection.xml"/>
+      <property ID="FTDI_FT2232.GPIO_L2" Name="EMU0" Type="hiddenfield" Value="EMU_Pin_0,Active_Low" id="EMU0" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\connections\TIXDS100usb_Connection.xml"/>
+      <property ID="FTDI_FT2232.GPIO_L3" Name="EMU1" Type="hiddenfield" Value="EMU_Pin_1,Active_Low" id="EMU1" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\connections\TIXDS100usb_Connection.xml"/>
+      <property ID="FTDI_FT2232.GPIO_H0" Name="SRST" Type="hiddenfield" Value="SRSTn,Active_High" id="SRST" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\connections\TIXDS100usb_Connection.xml"/>
+      <property ID="FTDI_FT2232.GPIO_H1" Name="SRST In" Type="hiddenfield" Value="SRSTn_In,Active_Low" id="SRST In" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\connections\TIXDS100usb_Connection.xml"/>
+      <property ID="FTDI_FT2232.GPIO_H2" Name="Power Loss Detect" Type="hiddenfield" Value="Power_Loss_Detect,Active_Low" id="Power Loss Detect" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\connections\TIXDS100usb_Connection.xml"/>
+      <property ID="FTDI_FT2232.GPIO_H3" Name="Power Loss Reset" Type="hiddenfield" Value="Power_Loss_Reset,Active_High" id="Power Loss Reset" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\connections\TIXDS100usb_Connection.xml"/>
+      <property ID="USCIF.TDOEDGE" Name="TMS/TDO Output Timing" Type="hiddenfield" Value="FALL" id="TMS/TDO Output Timing" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\connections\TIXDS100usb_Connection.xml"/>
+      <property ID="USCIF.JTAGBOOT_MODE" Name="The JTAG nTRST Boot-Mode" Type="choicelist" Value="0" id="The JTAG nTRST Boot-Mode" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\connections\TIXDS100usb_Connection.xml">
+        <choice Name="Disabled - Both EMU pins remain hi-z" value="disable">
+          <property ID="USCIF.JTAGBOOT_VALUE" Name="unused" Type="hiddenfield" Value="hiz" id="unused"/>
+        </choice>
+        <choice Name="Enabled - Both EMU pins are high" value="enable">
+          <property ID="USCIF.JTAGBOOT_VALUE" Name="unused" Type="hiddenfield" Value="11" id="unused"/>
+        </choice>
+        <choice Name="Enabled - EMU1 is high, EMU0 is low" value="enable">
+          <property ID="USCIF.JTAGBOOT_VALUE" Name="unused" Type="hiddenfield" Value="10" id="unused"/>
+        </choice>
+        <choice Name="Enabled - EMU1 is low, EMU0 is high" value="enable">
+          <property ID="USCIF.JTAGBOOT_VALUE" Name="unused" Type="hiddenfield" Value="01" id="unused"/>
+        </choice>
+        <choice Name="Enabled - Both EMU pins are low" value="enable">
+          <property ID="USCIF.JTAGBOOT_VALUE" Name="unused" Type="hiddenfield" Value="00" id="unused"/>
+        </choice>
+      </property>
+      <property ID="USCIF.POWERBOOT_MODE" Name="The Power-On-Reset Boot-Mode" Type="choicelist" Value="0" id="The Power-On-Reset Boot-Mode" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\connections\TIXDS100usb_Connection.xml">
+        <choice Name="Disabled - Both EMU pins remain hi-z" value="disable">
+          <property ID="USCIF.POWERBOOT_VALUE" Name="unused" Type="hiddenfield" Value="hiz" id="unused"/>
+        </choice>
+        <choice Name="Enabled - Both EMU pins are high" value="enable">
+          <property ID="USCIF.POWERBOOT_VALUE" Name="unused" Type="hiddenfield" Value="11" id="unused"/>
+        </choice>
+        <choice Name="Enabled - EMU1 is high, EMU0 is low" value="enable">
+          <property ID="USCIF.POWERBOOT_VALUE" Name="unused" Type="hiddenfield" Value="10" id="unused"/>
+        </choice>
+        <choice Name="Enabled - EMU1 is low, EMU0 is high" value="enable">
+          <property ID="USCIF.POWERBOOT_VALUE" Name="unused" Type="hiddenfield" Value="01" id="unused"/>
+        </choice>
+        <choice Name="Enabled - Both EMU pins are low" value="enable">
+          <property ID="USCIF.POWERBOOT_VALUE" Name="unused" Type="hiddenfield" Value="00" id="unused"/>
+        </choice>
+      </property>
+      <property ID="USCIF.TCLK_PROGRAM" Name="The JTAG TCLK Frequency (MHz)" Type="choicelist" Value="0" id="The JTAG TCLK Frequency (MHz)" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\connections\TIXDS100usb_Connection.xml">
+        <choice Name="Fixed default 1.0MHz frequency" value="SPECIFIC">
+          <property ID="USCIF.TCLK_FREQUENCY" Name="unused" Type="hiddenfield" Value="1.0" id="unused"/>
+        </choice>
+        <choice Name="Fixed with user specified faster value" value="SPECIFIC">
+          <property ID="USCIF.TCLK_FREQUENCY" Name="-- Enter a value from 1.0MHz to 6.0MHz" Type="stringfield" Value="1.0MHz" id="-- Enter a value from 1.0MHz to 6.0MHz"/>
+        </choice>
+        <choice Name="Fixed with user specified slower value" value="SPECIFIC">
+          <property ID="USCIF.TCLK_FREQUENCY" Name="-- Enter a value from 488Hz to 1.0MHz" Type="stringfield" Value="100KHz" id="-- Enter a value from 488Hz to 1.0MHz"/>
+        </choice>
+      </property>
+      <drivers id="drivers" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\drivers\tixds100c55x.xml">
+        <isa ProcID="0x50015400" Type="TMS320C55XX" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\drivers\tixds100c55x.xml">
+          <driver file="C:\Program Files\Texas Instruments\ccsv4\emulation\drivers\tixds55x.dvr">
+            <property Type="hiddenfield" Value="true" id="realtimeEnabled"/>
+            <connectionType Type="TIXDS100"/>
+          </driver>
+        </isa>
+      </drivers>
+      <platform id="platform_0">
+        <board desc="USBSTK5515_0" description="Spectrum Digital C5515 USB Stick" id="USBSTK5515_0" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\boards\usbstk5515.xml">
+          <device desc="TMS320VC5515_0" description="" id="TMS320VC5515_0" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\Devices\c5515.xml" partnum="TMS320VC5515">
+            <cpu desc="C55xx" description="The C55xx CPU" id="C55xx" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\cpus\c55xx.xml" isa="TMS320C55XX">
+              <register acronym="PC" description="Program Counter" id="PC" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\cpus\c55xx.xml" width="24"/>
+              <register acronym="XSP" description="Extended data stack pointer" id="XSP" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\cpus\c55xx.xml" width="23"/>
+              <register acronym="XSSP" description="Extended system stack pointer" id="XSSP" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\cpus\c55xx.xml" width="23"/>
+              <register acronym="RETA" description="Return address register" id="LCRPC" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\cpus\c55xx.xml" width="24"/>
+              <register acronym="CFCT" description="Control-flow context register" id="CFCT" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\cpus\c55xx.xml" width="8"/>
+              <register acronym="AC0" description="" id="AC0_HL" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\cpus\c55xx.xml" width="40"/>
+              <register acronym="AC1" description="" id="AC1_HL" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\cpus\c55xx.xml" width="40"/>
+              <register acronym="AC2" description="" id="AC2_HL" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\cpus\c55xx.xml" width="40"/>
+              <register acronym="AC3" description="" id="AC3_HL" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\cpus\c55xx.xml" width="40"/>
+              <register acronym="XDP" description="Extended data page register" id="XDP" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\cpus\c55xx.xml" width="23"/>
+              <register acronym="PDP" description="Peripheral data page register" id="PDP" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\cpus\c55xx.xml" width="9"/>
+              <register acronym="XCDP" description="Extended coefficient data pointer" id="XCDP" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\cpus\c55xx.xml" width="23"/>
+              <register acronym="XAR0" description="Extended auxiliary register 0" id="XAR0" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\cpus\c55xx.xml" width="23"/>
+              <register acronym="XAR1" description="Extended auxiliary register 1" id="XAR1" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\cpus\c55xx.xml" width="23"/>
+              <register acronym="XAR2" description="Extended auxiliary register 2" id="XAR2" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\cpus\c55xx.xml" width="23"/>
+              <register acronym="XAR3" description="Extended auxiliary register 3" id="XAR3" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\cpus\c55xx.xml" width="23"/>
+              <register acronym="XAR4" description="Extended auxiliary register 4" id="XAR4" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\cpus\c55xx.xml" width="23"/>
+              <register acronym="XAR5" description="Extended auxiliary register 5" id="XAR5" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\cpus\c55xx.xml" width="23"/>
+              <register acronym="XAR6" description="Extended auxiliary register 6" id="XAR6" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\cpus\c55xx.xml" width="23"/>
+              <register acronym="XAR7" description="Extended auxiliary register 7" id="XAR7" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\cpus\c55xx.xml" width="23"/>
+              <register acronym="T0" description="Temporary register 0" id="T0" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\cpus\c55xx.xml" width="16"/>
+              <register acronym="T1" description="Temporary register 1" id="T1" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\cpus\c55xx.xml" width="16"/>
+              <register acronym="T2" description="Temporary register 2" id="T2" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\cpus\c55xx.xml" width="16"/>
+              <register acronym="T3" description="Temporary register 3" id="T3" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\cpus\c55xx.xml" width="16"/>
+              <register acronym="ST0" description="Status register 0" id="ST0" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\cpus\c55xx.xml" width="16">
+                <bitfield begin="15" description="Overflow in AC2" end="15" id="ACOV2" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="" id="0 - No Overflow in AC2 has occured" token="0 - No Overflow in AC2 has occured" value="0"/>
+                  <bitenum description="" id="1 - Overflow in AC2 has occured" token="1 - Overflow in AC2 has occured" value="1"/>
+                </bitfield>
+                <bitfield begin="14" description="Overflow in AC3" end="14" id="ACOV3" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="" id="0 - No Overflow in AC3 has occured" token="0 - No Overflow in AC3 has occured" value="0"/>
+                  <bitenum description="" id="1 - Overflow in AC3 has occured" token="1 - Overflow in AC3 has occured" value="1"/>
+                </bitfield>
+                <bitfield begin="13" description="Test Flag 1" end="13" id="TC1" range="" resetval="1" rwaccess="RW" width="1">
+                  <bitenum description="" id="TC1 = 0" token="TC1 = 0" value="0"/>
+                  <bitenum description="" id="TC1 = 1" token="TC1 = 1" value="1"/>
+                </bitfield>
+                <bitfield begin="12" description="Test Flag 2" end="12" id="TC2" range="" resetval="1" rwaccess="RW" width="1">
+                  <bitenum description="" id="TC2 = 0" token="TC2 = 0" value="0"/>
+                  <bitenum description="" id="TC2 = 1" token="TC2 = 1" value="1"/>
+                </bitfield>
+                <bitfield begin="11" description="Carry Bit" end="11" id="CARRY" range="" resetval="1" rwaccess="RW" width="1">
+                  <bitenum description="" id="0 - Carry Bit is not set" token="0 - Carry Bit is not set" value="0"/>
+                  <bitenum description="" id="1 - Carry Bit is set" token="1 - Carry Bit is set" value="1"/>
+                </bitfield>
+                <bitfield begin="10" description="Overflow in AC0" end="10" id="ACOV0" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="" id="0 - No Overflow in AC0 has occured" token="0 - No Overflow in AC0 has occured" value="0"/>
+                  <bitenum description="" id="1 - Overflow in AC0 has occured" token="1 - Overflow in AC0 has occured" value="1"/>
+                </bitfield>
+                <bitfield begin="9" description="Overflow in AC1" end="9" id="ACOV1" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="" id="0 - No Overflow in AC1 has occured" token="0 - No Overflow in AC1 has occured" value="0"/>
+                  <bitenum description="" id="1 - Overflow in AC1 has occured" token="1 - Overflow in AC1 has occured" value="1"/>
+                </bitfield>
+                <bitfield begin="8" description="DP[15:7] (C54 Mode only)" end="0" id="DP" range="" resetval="0" rwaccess="RW" width="9"/>
+              </register>
+              <register acronym="ST1" description="Status register 1" id="ST1" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\cpus\c55xx.xml" width="16">
+                <bitfield begin="15" description="Block-repeat Active Flag (C54 Mode only)" end="15" id="BRAF" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="" id="0 - No Block-repeat is active" token="0 - No Block-repeat is active in C54 Mode" value="0"/>
+                  <bitenum description="" id="1 - A Block-repeat is active" token="1 - Block-repeat is active in C54 Mode" value="1"/>
+                </bitfield>
+                <bitfield begin="14" description="Compiler Mode" end="14" id="CPL" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="" id="0 - DP Direct Addressing Mode" token="0 - DP Direct Addressing Mode" value="0"/>
+                  <bitenum description="" id="1 - SP Direct Addressing Mode" token="1 - SP Direct Addressing Mode" value="1"/>
+                </bitfield>
+                <bitfield begin="13" description="XF Pin Control" end="13" id="XF" range="" resetval="1" rwaccess="RW" width="1">
+                  <bitenum description="" id="0 - XF pin is low" token="0 - XF pin is low" value="0"/>
+                  <bitenum description="" id="1 - XF pin is high" token="1 - XF pin is high" value="1"/>
+                </bitfield>
+                <bitfield begin="12" description="Hold Mode" end="12" id="HM" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="" id="0 - Hold on EMIF Hold Request" token="0 - Hold on EMIF Hold Request" value="0"/>
+                  <bitenum description="" id="1 - Ignore EMIF Hold Request" token="1 - Ignore EMIF Hold Request" value="1"/>
+                </bitfield>
+                <bitfield begin="11" description="Global Interrupt Mask" end="11" id="INTM" range="" resetval="1" rwaccess="RW" width="1">
+                  <bitenum description="" id="0 - Interrupts are enabled" token="0 - Interrupts are enabled" value="0"/>
+                  <bitenum description="" id="1 - Interrupts are disabled" token="1 - Interrupts are disabled" value="1"/>
+                </bitfield>
+                <bitfield begin="10" description="D-Unit Data Width" end="10" id="M40" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="" id="0 - 32-Bit Mode" token="0 - 32-Bit Mode" value="0"/>
+                  <bitenum description="" id="1 - 40-Bit Mode" token="1 - 40-Bit Mode" value="1"/>
+                </bitfield>
+                <bitfield begin="9" description="Saturate D-Unit on Overflow" end="9" id="SATD" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="" id="0 - No D-Unit Saturation on Overflow" token="0 - No D-Unit Saturation on Overflow" value="0"/>
+                  <bitenum description="" id="1 - D-Unit Saturation on Overflow" token="1 - D-Unit Saturation on Overflow" value="1"/>
+                </bitfield>
+                <bitfield begin="8" description="Sign-extension Mode" end="8" id="SXMD" range="" resetval="1" rwaccess="RW" width="1">
+                  <bitenum description="" id="0 - No Sign-extension in the D-Unit" token="0 - No Sign-extension in the D-Unit" value="0"/>
+                  <bitenum description="" id="1 - Sign-extension in the D-Unit" token="1 - Sign-extension in the D-Unit" value="1"/>
+                </bitfield>
+                <bitfield begin="7" description="Dual 16-Bit Mode (C54 Mode only)" end="7" id="C16" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="" id="0 - Dual 16-Bit Mode is Off" token="0 - Dual 16-Bit Mode is Off in C54 Mode" value="0"/>
+                  <bitenum description="" id="1 - Dual 16-Bit Mode is On" token="1 - Dual 16-Bit Mode is On in C54 Mode" value="1"/>
+                </bitfield>
+                <bitfield begin="6" description="Fractional Mode" end="6" id="FRCT" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="" id="0 - Integer Mode" token="0 - Integer Mode" value="0"/>
+                  <bitenum description="" id="1 - Fractional Mode" token="1 - Fractional Mode" value="1"/>
+                </bitfield>
+                <bitfield begin="5" description="C54 Compatbility Mode" end="5" id="C54CM" range="" resetval="1" rwaccess="RW" width="1">
+                  <bitenum description="" id="0 - CPU is in C55 Mode" token="0 - CPU is in C55 Mode" value="0"/>
+                  <bitenum description="" id="1 - CPU is in C54 Mode" token="1 - CPU is in C54 Mode" value="1"/>
+                </bitfield>
+                <bitfield begin="4" description="Accumulator Shift Mode (C54 Mode only)" end="0" id="ASM" range="" resetval="0" rwaccess="RW" width="5"/>
+              </register>
+              <register acronym="ST2" description="Status register 2" id="ST2" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\cpus\c55xx.xml" width="16">
+                <bitfield begin="15" description="AR Indirect Operand Selection" end="15" id="ARMS" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="" id="0 - DSP Operands Available" token="0 - DSP Operands Available" value="0"/>
+                  <bitenum description="C" id="1 - Control Operands Available" token="1 - Control Operands Available" value="1"/>
+                </bitfield>
+                <bitfield begin="12" description="Debug Mask" end="12" id="DBGM" range="" resetval="1" rwaccess="RW" width="1">
+                  <bitenum description="" id="0 - Debug Events Enabled" token="0 - Debug Events Enabled" value="0"/>
+                  <bitenum description="" id="1 - Debug Events Disabled" token="1 - Debug Events Disabled" value="1"/>
+                </bitfield>
+                <bitfield begin="11" description="Emulation Register Access Allow" end="11" id="EALLOW" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="" id="0 - Emulation Registers Non-accessible" token="0 - Emulation Registers Non-accessible" value="0"/>
+                  <bitenum description="" id="1 - Emulation Registers Accessible" token="1 - Emulation Registers Accessible" value="1"/>
+                </bitfield>
+                <bitfield begin="10" description="Rounding Mode" end="10" id="RDM" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="" id="0 - Round to the Inifinite" token="0 - Round to the Inifinite" value="0"/>
+                  <bitenum description="" id="1 - Round to the Nearest" token="1 - Round to the Nearest" value="1"/>
+                </bitfield>
+                <bitfield begin="8" description="CDP Addressing Mode" end="8" id="CDPLC" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="" id="0 - Linear Mode for CDP" token="0 - Linear Mode for CDP" value="0"/>
+                  <bitenum description="" id="1 - Circular Mode for CDP" token="1 - Circular Mode for CDP" value="1"/>
+                </bitfield>
+                <bitfield begin="7" description="" end="7" id="AR7LC" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="" id="0 - Linear Mode for AR7" token="0 - Linear Mode for AR7" value="0"/>
+                  <bitenum description="" id="1 - Circular Mode for AR7" token="1 - Circular Mode for AR7" value="1"/>
+                </bitfield>
+                <bitfield begin="6" description="" end="6" id="AR6LC" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="" id="0 - Linear Mode for AR6" token="0 - Linear Mode for AR6" value="0"/>
+                  <bitenum description="" id="1 - Circular Mode for AR6" token="1 - Circular Mode for AR6" value="1"/>
+                </bitfield>
+                <bitfield begin="5" description="" end="5" id="AR5LC" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="" id="0 - Linear Mode for AR5" token="0 - Linear Mode for AR5" value="0"/>
+                  <bitenum description="" id="1 - Circular Mode for AR5" token="1 - Circular Mode for AR5" value="1"/>
+                </bitfield>
+                <bitfield begin="4" description="" end="4" id="AR4LC" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="" id="0 - Linear Mode for AR4" token="0 - Linear Mode for AR4" value="0"/>
+                  <bitenum description="" id="1 - Circular Mode for AR4" token="1 - Circular Mode for AR4" value="1"/>
+                </bitfield>
+                <bitfield begin="3" description="" end="3" id="AR3LC" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="" id="0 - Linear Mode for AR3" token="0 - Linear Mode for AR3" value="0"/>
+                  <bitenum description="" id="1 - Circular Mode for AR3" token="1 - Circular Mode for AR3" value="1"/>
+                </bitfield>
+                <bitfield begin="2" description="" end="2" id="AR2LC" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="" id="0 - Linear Mode for AR2" token="0 - Linear Mode for AR2" value="0"/>
+                  <bitenum description="" id="1 - Circular Mode for AR2" token="1 - Circular Mode for AR2" value="1"/>
+                </bitfield>
+                <bitfield begin="1" description="" end="1" id="AR1LC" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="" id="0 - Linear Mode for AR1" token="0 - Linear Mode for AR1" value="0"/>
+                  <bitenum description="" id="1 - Circular Mode for AR1" token="1 - Circular Mode for AR1" value="1"/>
+                </bitfield>
+                <bitfield begin="0" description="" end="0" id="AR0LC" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="" id="0 - Linear Mode for AR0" token="0 - Linear Mode for AR0" value="0"/>
+                  <bitenum description="" id="1 - Circular Mode for AR0" token="1 - Circular Mode for AR0" value="1"/>
+                </bitfield>
+              </register>
+              <register acronym="ST3" description="Status register 3" id="ST3" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\cpus\c55xx.xml" width="16">
+                <bitfield begin="15" description="Cache Freeze" end="15" id="CAFRZ" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="" id="0 - Cache is in normal mode" token="0 - Cache is in normal mode" value="0"/>
+                  <bitenum description="" id="1 - Cache content is locked" token="1 - Cache content is locked" value="1"/>
+                </bitfield>
+                <bitfield begin="14" description="Cache Enable" end="14" id="CAEN" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="" id="0 - Cache is Disabled" token="0 - Cache is Disabled" value="0"/>
+                  <bitenum description="" id="1 - Cache is Enabled" token="1 - Cache is Enabled" value="1"/>
+                </bitfield>
+                <bitfield begin="13" description="Cache Clear" end="13" id="CACLR" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="" id="0 - No Action" token="0 - No Action" value="0"/>
+                  <bitenum description="" id="1 - Flush the Cache" token="1 - Flush the Cache" value="1"/>
+                </bitfield>
+                <bitfield begin="12" description="Host Interrupt Line State" end="12" id="HINT" range="" resetval="1" rwaccess="RW" width="1">
+                  <bitenum description="" id="0 - Set Host Interrupt Line Low" token="0 - Set Host Interrupt Line Low" value="0"/>
+                  <bitenum description="" id="1 - Set Host Interrupt Line High" token="1 - Set Host Interrupt Line High" value="1"/>
+                </bitfield>
+                <bitfield begin="7" description="CPU Bus Error Flag" end="7" id="CBERR" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="" id="0 - Bus Error Flag is cleared" token="0 - Bus Error Flag is cleared" value="0"/>
+                  <bitenum description="" id="1 - Bus Error Flag is set" token="1 - Bus Error Flag is set" value="1"/>
+                </bitfield>
+                <bitfield begin="6" description="Boot ROM Enable" end="6" id="MPnMC" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="" id="0 - Boot ROM is Enabled" token="0 - Boot ROM is Enabled" value="0"/>
+                  <bitenum description="" id="1 - Boot ROM is Disabled" token="1 - Boot ROM is Disabled" value="1"/>
+                </bitfield>
+                <bitfield begin="5" description="Saturate A-Unit on Overflow" end="5" id="SATA" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="" id="0 - No A-Unit Saturation on Overflow" token="0 - No A-Unit Saturation on Overflow" value="0"/>
+                  <bitenum description="" id="1 - A-Unit Saturation on Overflow" token="1 - A-Unit Saturation on Overflow" value="1"/>
+                </bitfield>
+                <bitfield begin="2" description="CLKOUT Pin Disable" end="2" id="CLKOFF" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="" id="0 - CLKOUT is Enabled" token="0 - CLKOUT is Enabled" value="0"/>
+                  <bitenum description="" id="1 - CLKOUT is Disabled" token="1 - CLKOUT is Disabled" value="1"/>
+                </bitfield>
+                <bitfield begin="7" description="Saturate on Multiplication" end="7" id="SMUL" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="" id="0 - No Saturation of Multiplication Results" token="0 - No Saturation of Multiplication Results" value="0"/>
+                  <bitenum description="" id="1 - Saturation of Multiplication Results" token="1 - Saturation of Multiplication Results" value="1"/>
+                </bitfield>
+                <bitfield begin="0" description="Saturate on Store (C54 Mode only)" end="0" id="SST" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="" id="0 - No Saturation on Store" token="0 - No Saturation on Store" value="0"/>
+                  <bitenum description="" id="1 - Saturation on Store" token="1 - Saturation on Store" value="1"/>
+                </bitfield>
+              </register>
+              <register acronym="IER0" description="Interrupt enable register 0" id="IER0" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\cpus\c55xx.xml" width="16">
+                <bitfield begin="15" description="Interrupt enable bit 15" end="15" id="IE15" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is disabled." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is enabled." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="14" description="Interrupt enable bit 14" end="14" id="IE14" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is disabled." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is enabled." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="13" description="Interrupt enable bit 13" end="13" id="IE13" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is disabled." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is enabled." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="12" description="Interrupt enable bit 12" end="12" id="IE12" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is disabled." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is enabled." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="11" description="Interrupt enable bit 11" end="11" id="IE11" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is disabled." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is enabled." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="10" description="Interrupt enable bit 10" end="10" id="IE10" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is disabled." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is enabled." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="9" description="Interrupt enable bit 9" end="9" id="IE9" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is disabled." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is enabled." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="8" description="Interrupt enable bit 8" end="8" id="IE8" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is disabled." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is enabled." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="7" description="Interrupt enable bit 7" end="7" id="IE7" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is disabled." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is enabled." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="6" description="Interrupt enable bit 6" end="6" id="IE6" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is disabled." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is enabled." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="5" description="Interrupt enable bit 5" end="5" id="IE5" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is disabled." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is enabled." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="4" description="Interrupt enable bit 4" end="4" id="IE4" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is disabled." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is enabled." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="3" description="Interrupt enable bit 3" end="3" id="IE3" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is disabled." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is enabled." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="2" description="Interrupt enable bit 2" end="2" id="IE2" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is disabled." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is enabled." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="1" description="Reserved." end="0" id="Reserved" range="" resetval="0" rwaccess="R" width="2"/>
+              </register>
+              <register acronym="IER1" description="Interrupt enable register 1" id="IER1" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\cpus\c55xx.xml" width="16">
+                <bitfield begin="15" description="Reserved." end="11" id="Reserved" range="" resetval="0" rwaccess="R" width="5"/>
+                <bitfield begin="10" description="Enable bit for the real-time operating system interrupt, RTOSINT" end="10" id="RTOSINTE" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="RTOSINT is disabled." id="0" token="0" value="0"/>
+                  <bitenum description="RTOSINT is enabled." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="9" description="Enable bit for the data log interrupt, DLOGINT" end="9" id="DLOGINTE" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="DLOGINT is disabled." id="0" token="0" value="0"/>
+                  <bitenum description="DLOGINT is enabled." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="8" description="Enable bit for the bus error interrupt, BERRINT" end="8" id="BERRINTE" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="BERRINT is disabled." id="0" token="0" value="0"/>
+                  <bitenum description="BERRINT is enabled." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="7" description="Interrupt enable bit 23" end="7" id="IE23" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is disabled." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is enabled." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="6" description="Interrupt enable bit 22" end="6" id="IE22" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is disabled." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is enabled." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="5" description="Interrupt enable bit 21" end="5" id="IE21" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is disabled." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is enabled." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="4" description="Interrupt enable bit 20" end="4" id="IE20" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is disabled." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is enabled." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="3" description="Interrupt enable bit 19" end="3" id="IE19" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is disabled." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is enabled." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="2" description="Interrupt enable bit 18" end="2" id="IE18" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is disabled." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is enabled." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="1" description="Interrupt enable bit 17" end="1" id="IE17" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is disabled." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is enabled." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="0" description="Interrupt enable bit 16" end="0" id="IE16" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is disabled." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is enabled." id="1" token="1" value="1"/>
+                </bitfield>
+              </register>
+              <register acronym="IFR0" description="Interrupt flag register 0" id="IFR0" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\cpus\c55xx.xml" width="16">
+                <bitfield begin="15" description="Interrupt flag bit 15" end="15" id="IF15" range="" resetval="0" rwaccess="RW1C" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is not pending." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is pending." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="14" description="Interrupt flag bit 14" end="14" id="IF14" range="" resetval="0" rwaccess="RW1C" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is not pending." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is pending." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="13" description="Interrupt flag bit 13" end="13" id="IF13" range="" resetval="0" rwaccess="RW1C" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is not pending." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is pending." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="12" description="Interrupt flag bit 12" end="12" id="IF12" range="" resetval="0" rwaccess="RW1C" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is not pending." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is pending." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="11" description="Interrupt flag bit 11" end="11" id="IF11" range="" resetval="0" rwaccess="RW1C" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is not pending." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is pending." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="10" description="Interrupt flag bit 10" end="10" id="IF10" range="" resetval="0" rwaccess="RW1C" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is not pending." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is pending." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="9" description="Interrupt flag bit 9" end="9" id="IF9" range="" resetval="0" rwaccess="RW1C" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is not pending." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is pending." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="8" description="Interrupt flag bit 8" end="8" id="IF8" range="" resetval="0" rwaccess="RW1C" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is not pending." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is pending." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="7" description="Interrupt flag bit 7" end="7" id="IF7" range="" resetval="0" rwaccess="RW1C" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is not pending." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is pending." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="6" description="Interrupt flag bit 6" end="6" id="IF6" range="" resetval="0" rwaccess="RW1C" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is not pending." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is pending." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="5" description="Interrupt flag bit 5" end="5" id="IF5" range="" resetval="0" rwaccess="RW1C" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is not pending." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is pending." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="4" description="Interrupt flag bit 4" end="4" id="IF4" range="" resetval="0" rwaccess="RW1C" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is not pending." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is pending." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="3" description="Interrupt flag bit 3" end="3" id="IF3" range="" resetval="0" rwaccess="RW1C" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is not pending." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is pending." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="2" description="Interrupt flag bit 2" end="2" id="IF2" range="" resetval="0" rwaccess="RW1C" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is not pending." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is pending." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="1" description="Reserved." end="0" id="Reserved" range="" resetval="0" rwaccess="R" width="2"/>
+              </register>
+              <register acronym="IFR1" description="Interrupt flag register 1" id="IFR1" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\cpus\c55xx.xml" width="16">
+                <bitfield begin="15" description="Reserved." end="11" id="Reserved" range="" resetval="0" rwaccess="R" width="5"/>
+                <bitfield begin="10" description="Interrupt flag bit for the real-time operating system interrupt, RTOSINT" end="10" id="RTOSINTF" range="" resetval="0" rwaccess="RW1C" width="1">
+                  <bitenum description="RTOSINT is not pending." id="0" token="0" value="0"/>
+                  <bitenum description="RTOSINT is pending." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="9" description="Interrupt flag bit for the data log interrupt, DLOGINT" end="9" id="DLOGINTF" range="" resetval="0" rwaccess="RW1C" width="1">
+                  <bitenum description="DLOGINT is not pending." id="0" token="0" value="0"/>
+                  <bitenum description="DLOGINT is pending." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="8" description="Interrupt flag bit for the bus error interrupt, BERRINT" end="8" id="BERRINTF" range="" resetval="0" rwaccess="RW1C" width="1">
+                  <bitenum description="BERRINT is not pending." id="0" token="0" value="0"/>
+                  <bitenum description="BERRINT is pending." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="7" description="Interrupt flag bit 23" end="7" id="IF23" range="" resetval="0" rwaccess="RW1C" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is not pending." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is pending." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="6" description="Interrupt flag bit 22" end="6" id="IF22" range="" resetval="0" rwaccess="RW1C" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is not pending." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is pending." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="5" description="Interrupt flag bit 21" end="5" id="IF21" range="" resetval="0" rwaccess="RW1C" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is not pending." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is pending." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="4" description="Interrupt flag bit 20" end="4" id="IF20" range="" resetval="0" rwaccess="RW1C" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is not pending." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is pending." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="3" description="Interrupt flag bit 19" end="3" id="IF19" range="" resetval="0" rwaccess="RW1C" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is not pending." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is pending." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="2" description="Interrupt flag bit 18" end="2" id="IF18" range="" resetval="0" rwaccess="RW1C" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is not pending." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is pending." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="1" description="Interrupt flag bit 17" end="1" id="IF17" range="" resetval="0" rwaccess="RW1C" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is not pending." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is pending." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="0" description="Interrupt flag bit 16" end="0" id="IF16" range="" resetval="0" rwaccess="RW1C" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is not pending." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is pending." id="1" token="1" value="1"/>
+                </bitfield>
+              </register>
+              <register acronym="IVPD" description="DSPinterrupt vector pointer" id="IVPD" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\cpus\c55xx.xml" width="16"/>
+              <register acronym="IVPH" description="Host interrupt vector pointer" id="IVPH" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\cpus\c55xx.xml" width="16"/>
+              <register acronym="TRN0" description="Transition register 0" id="TRN0" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\cpus\c55xx.xml" width="16"/>
+              <register acronym="TRN1" description="Transition register 1" id="TRN1" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\cpus\c55xx.xml" width="16"/>
+              <register acronym="DBIER0" description="Debug interrupt enable register 0" id="DBIER0" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\cpus\c55xx.xml" width="16">
+                <bitfield begin="15" description="Debug interrupt enable bit 15" end="15" id="DBIE15" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is disabled." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is enabled." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="14" description="Debug interrupt enable bit 14" end="14" id="DBIE14" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is disabled." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is enabled." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="13" description="Debug interrupt enable bit 13" end="13" id="DBIE13" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is disabled." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is enabled." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="12" description="Debug interrupt enable bit 12" end="12" id="DBIE12" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is disabled." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is enabled." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="11" description="Debug interrupt enable bit 11" end="11" id="DBIE11" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is disabled." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is enabled." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="10" description="Debug interrupt enable bit 10" end="10" id="DBIE10" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is disabled." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is enabled." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="9" description="Debug interrupt enable bit 9" end="9" id="DBIE9" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is disabled." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is enabled." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="8" description="Debug interrupt enable bit 8" end="8" id="DBIE8" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is disabled." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is enabled." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="7" description="Debug interrupt enable bit 7" end="7" id="DBIE7" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is disabled." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is enabled." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="6" description="Debug interrupt enable bit 6" end="6" id="DBIE6" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is disabled." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is enabled." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="5" description="Debug interrupt enable bit 5" end="5" id="DBIE5" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is disabled." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is enabled." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="4" description="Debug interrupt enable bit 4" end="4" id="DBIE4" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is disabled." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is enabled." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="3" description="Debug interrupt enable bit 3" end="3" id="DBIE3" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is disabled." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is enabled." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="2" description="Debug interrupt enable bit 2" end="2" id="DBIE2" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is disabled." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is enabled." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="1" description="Reserved." end="0" id="Reserved" range="" resetval="0" rwaccess="RW" width="2"/>
+              </register>
+              <register acronym="DBIER1" description="Debug interrupt enable register 1" id="DBIER1" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\cpus\c55xx.xml" width="16">
+                <bitfield begin="15" description="Reserved." end="11" id="Reserved" range="" resetval="0" rwaccess="R" width="5"/>
+                <bitfield begin="10" description="Debug enable bit for the real-time operating system interrupt, RTOSINT" end="10" id="RTOSINTD" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="RTOSINT is disabled." id="0" token="0" value="0"/>
+                  <bitenum description="RTOSINT is enabled. It is configured as a time-critical interrupt." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="9" description="Debug enable bit for the data log interrupt, DLOGINT" end="9" id="DLOGINTD" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="DLOGINT is disabled." id="0" token="0" value="0"/>
+                  <bitenum description="DLOGINT is enabled." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="8" description="Debug enable bit for the bus error interrupt, BERRINT" end="8" id="BERRINTD" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="BERRINT is disabled." id="0" token="0" value="0"/>
+                  <bitenum description="BERRINT is enabled." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="7" description="Debug interrupt enable bit 23" end="7" id="DBIE23" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is disabled." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is enabled." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="6" description="Debug interrupt enable bit 22" end="6" id="DBIE22" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is disabled." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is enabled." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="5" description="Debug interrupt enable bit 21" end="5" id="DBIE21" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is disabled." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is enabled." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="4" description="Debug interrupt enable bit 20" end="4" id="DBIE20" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is disabled." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is enabled." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="3" description="Debug interrupt enable bit 19" end="3" id="DBIE19" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is disabled." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is enabled." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="2" description="Debug interrupt enable bit 18" end="2" id="DBIE18" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is disabled." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is enabled." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="1" description="Debug interrupt enable bit 17" end="1" id="DBIE17" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is disabled." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is enabled." id="1" token="1" value="1"/>
+                </bitfield>
+                <bitfield begin="0" description="Debug interrupt enable bit 16" end="0" id="DBIE16" range="" resetval="0" rwaccess="RW" width="1">
+                  <bitenum description="The interrupt associated with interrupt vector x is disabled." id="0" token="0" value="0"/>
+                  <bitenum description="The interrupt associated with interrupt vector x is enabled." id="1" token="1" value="1"/>
+                </bitfield>
+              </register>
+              <register acronym="BSA01" description="Circular buffer start address register for AR0-AR1" id="BSA01" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\cpus\c55xx.xml" width="16"/>
+              <register acronym="BSA23" description="Circular buffer start address register for AR2-AR3" id="BSA23" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\cpus\c55xx.xml" width="16"/>
+              <register acronym="BSA45" description="Circular buffer start address register for AR4-AR5" id="BSA45" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\cpus\c55xx.xml" width="16"/>
+              <register acronym="BSA67" description="Circular buffer start address register for AR6-AR7" id="BSA67" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\cpus\c55xx.xml" width="16"/>
+              <register acronym="BK03" description="Circular buffer size register for AR0-AR3" id="BK03" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\cpus\c55xx.xml" width="16"/>
+              <register acronym="BK47" description="Circular buffer size register for AR4-AR7" id="BK47" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\cpus\c55xx.xml" width="16"/>
+              <register acronym="BSAC" description="Circular buffer start address register for CDP" id="BSAC" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\cpus\c55xx.xml" width="16"/>
+              <register acronym="BKC" description="Circular buffer size register for CDP" id="BKC" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\cpus\c55xx.xml" width="16"/>
+              <register acronym="RPTC" description="Single-repeat counter" id="RPTC" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\cpus\c55xx.xml" width="16"/>
+              <register acronym="CSR" description="Computed single-repeat register" id="CSR" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\cpus\c55xx.xml" width="16"/>
+              <register acronym="BRC0" description="Block Repeat Counter 0" id="BRC0" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\cpus\c55xx.xml" width="16"/>
+              <register acronym="RSA0" description="Block-repeat start address register 0" id="RSA0" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\cpus\c55xx.xml" width="24"/>
+              <register acronym="REA0" description="Block-repeat end address register 0" id="REA0" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\cpus\c55xx.xml" width="24"/>
+              <register acronym="BRC1" description="Block Repeat Counter 1" id="BRC1" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\cpus\c55xx.xml" width="16"/>
+              <register acronym="RSA1" description="Block-repeat start address register 1" id="RSA1" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\cpus\c55xx.xml" width="24"/>
+              <register acronym="REA1" description="Block-repeat end address register 1" id="REA1" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\cpus\c55xx.xml" width="24"/>
+              <register acronym="BRS1" description="BRC1 Save Register" id="BRS1" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\cpus\c55xx.xml" width="16"/>
+              <module accessnumbytes="2" baseaddr="0" description="" hidden="true" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\Modules\55xxNotVisible.xml" permissions="p" requestor="TMS320C55XX" size="00"/>
+              <property Type="stringfield" Value="--memory_model=huge --ptrdiff_size=32 --silicon_version=5515" id="CompilerBuildOptions"/>
+              <property Type="stringfield" Value="rts55h.lib" id="RTSlib"/>
+              <module accessnumbytes="2" baseaddr="0x7000" description="Analog Control" endaddr="0x700f" id="DSPANACTRL" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\Modules\C5515\cslr_anactrl_001.xml" permissions="p" requestor="TMS320VC5515/14" size="0x0010"/>
+              <module accessnumbytes="2" baseaddr="0x0000" description="CPU" endaddr="0x007f" id="CPU" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\Modules\C5515\cslr_cpu_001.xml" permissions="p" requestor="TMS320VC5515/14" size="0x0080"/>
+              <module accessnumbytes="2" baseaddr="0x0c00" description="DMA0" endaddr="0x0c7f" id="DMA0" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\Modules\C5515\cslr_dma_001.xml" permissions="p" requestor="TMS320VC5515/14" size="0x0080"/>
+              <module accessnumbytes="2" baseaddr="0x0d00" description="DMA1" endaddr="0x0d7f" id="DMA1" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\Modules\C5515\cslr_dma_001.xml" permissions="p" requestor="TMS320VC5515/14" size="0x0080"/>
+              <module accessnumbytes="2" baseaddr="0x0e00" description="DMA2" endaddr="0x0d7f" id="DMA2" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\Modules\C5515\cslr_dma_001.xml" permissions="p" requestor="TMS320VC5515/14" size="0x0080"/>
+              <module accessnumbytes="2" baseaddr="0x0f00" description="DMA3" endaddr="0x0d7f" id="DMA3" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\Modules\C5515\cslr_dma_001.xml" permissions="p" requestor="TMS320VC5515/14" size="0x0080"/>
+              <module accessnumbytes="2" baseaddr="0x1000" description="EMIF" endaddr="0x10ff" id="EMIF" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\Modules\C5515\cslr_emif_001.xml" permissions="p" requestor="TMS320VC5515/14" size="0x0100"/>
+              <module accessnumbytes="2" baseaddr="0x1c00" description="GPIO" endaddr="0x1c1f" id="GPIO" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\Modules\C5515\cslr_gpio_001.xml" permissions="p" requestor="TMS320VC5515/14" size="0x0020"/>
+              <module accessnumbytes="2" baseaddr="0x1a00" description="I2C" endaddr="0x1a3f" id="I2C" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\Modules\C5515\cslr_i2c_001.xml" permissions="p" requestor="TMS320VC5515/14" size="0x0040"/>
+              <module accessnumbytes="2" baseaddr="0x2800" description="I2S0" endaddr="0x282f" id="I2S0" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\Modules\C5515\cslr_i2s_001.xml" permissions="p" requestor="TMS320VC5515/14" size="0x0030"/>
+              <module accessnumbytes="2" baseaddr="0x2900" description="I2S1" endaddr="0x292f" id="I2S1" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\Modules\C5515\cslr_i2s_001.xml" permissions="p" requestor="TMS320VC5515/14" size="0x0030"/>
+              <module accessnumbytes="2" baseaddr="0x2a00" description="I2S2" endaddr="0x2a2f" id="I2S2" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\Modules\C5515\cslr_i2s_001.xml" permissions="p" requestor="TMS320VC5515/14" size="0x0030"/>
+              <module accessnumbytes="2" baseaddr="0x2b00" description="I2S3" endaddr="0x2b2f" id="I2S3" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\Modules\C5515\cslr_i2s_001.xml" permissions="p" requestor="TMS320VC5515/14" size="0x0030"/>
+              <module accessnumbytes="2" baseaddr="0x2e00" description="LCDC" endaddr="0x2e5f" id="LCDC" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\Modules\C5515\cslr_lcdc_001.xml" permissions="p" requestor="TMS320VC5515/14" size="0x0060"/>
+              <module accessnumbytes="2" baseaddr="0x3a00" description="MMCSD0" endaddr="0x3a7f" id="MMCSD0" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\Modules\C5515\cslr_mmcsd_001.xml" permissions="p" requestor="TMS320VC5515/14" size="0x0080"/>
+              <module accessnumbytes="2" baseaddr="0x3b00" description="MMCSD1" endaddr="0x3b7f" id="MMCSD1" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\Modules\C5515\cslr_mmcsd_001.xml" permissions="p" requestor="TMS320VC5515/14" size="0x0080"/>
+              <module accessnumbytes="2" baseaddr="0x1900" description="RTC" endaddr="0x192f" id="RTC" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\Modules\C5515\cslr_rtc_001.xml" permissions="p" requestor="TMS320VC5515/14" size="0x0030"/>
+              <module accessnumbytes="2" baseaddr="0x3000" description="SPI" endaddr="0x300f" id="SPI" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\Modules\C5515\cslr_spi_001.xml" permissions="p" requestor="TMS320VC5515/14" size="0x0010"/>
+              <module accessnumbytes="2" baseaddr="0x1c00" description="SYS" endaddr="0x1c3f" id="SYS" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\Modules\C5515\cslr_sys_001.xml" permissions="p" requestor="TMS320VC5515/14" size="0x0040"/>
+              <module accessnumbytes="2" baseaddr="0x1810" description="TIMER0" endaddr="0x181f" id="TIMER0" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\Modules\C5515\cslr_timer_001.xml" permissions="p" requestor="TMS320VC5515/14" size="0x0010"/>
+              <module accessnumbytes="2" baseaddr="0x1850" description="TIMER1" endaddr="0x185f" id="TIMER1" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\Modules\C5515\cslr_timer_001.xml" permissions="p" requestor="TMS320VC5515/14" size="0x0010"/>
+              <module accessnumbytes="2" baseaddr="0x1890" description="TIMER2" endaddr="0x189f" id="TIMER2" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\Modules\C5515\cslr_timer_001.xml" permissions="p" requestor="TMS320VC5515/14" size="0x0010"/>
+              <module accessnumbytes="2" baseaddr="0x1b00" description="UART" endaddr="0x1b1f" id="UART" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\Modules\C5515\cslr_uart_001.xml" permissions="p" requestor="TMS320VC5515/14" size="0x0020"/>
+              <module accessnumbytes="2" baseaddr="0x8000" description="USB" endaddr="0xefff" id="USB" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\Modules\C5515\cslr_usb_001.xml" permissions="p" requestor="TMS320VC5515/14" size="0x7000"/>
+              <module accessnumbytes="2" baseaddr="0x1880" description="WDT" endaddr="0x188f" id="WDT" instanceFile="C:\Program Files\Texas Instruments\ccsv4\common\targetdb\Modules\C5515\cslr_wdt_001.xml" permissions="p" requestor="TMS320VC5515/14" size="0x0010"/>
+              <property Type="filepathfield" Value="C:\Documents and Settings\a0797073\My Documents\workspace\MP3Dec\usbstk5515.gel" id="GEL File"/>
+            </cpu>
+          </device>
+        </board>
+      </platform>
+    </connection>
+  </configuration>
+
+</configurations>

@@ -1,0 +1,1 @@
+"../MP3Dec.tcf" "../common.c" "../decode.c" "../keys.c" "../led_blinking.c" "../main.c" "../md_aic3204.c" "../menu_control.c" "../oled.c" "../read_samples.c" "../sdcard.c" "../tskDecode.c" 
